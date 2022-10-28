@@ -371,29 +371,29 @@
                 </button>
                 <div class="form-group" role="group" aria-labelledby="contact-details-head">
                     <h2 id="contact-details-head">Залиште свої дані, ми вам передзвонимо</h2>
-                    <form name="signup_form" autocomplete="on" novalidate>
+                    <form class="modal-form" name="signup_form" autocomplete="on" novalidate>
                         <label>
                             Ім'я
-                            <input type="name" name="name" autofocus placeholder="username" required pattern="^[a-zA-Z]+\s[a-zA-Z]+$" title="Username must be two words separated by space."/>
+                            <input class="modal-input" type="name" name="name" autofocus placeholder="username" required pattern="^[a-zA-Z]+\s[a-zA-Z]+$" title="Username must be two words separated by space."/>
                         </label>
                         <label>
                             Телефон
-                            <input type="tel" name="phone_number" placeholder="+380000000000" required />
+                            <input class="modal-input" type="tel" name="phone_number" placeholder="+380000000000" required />
                         </label>
                         <label>
                             Пошта
-                            <input type="email" name="email" placeholder="example@gmail.com" required />
+                            <input class="modal-input" type="email" name="email" placeholder="example@gmail.com" required />
                         </label>
                         <label>
                             Коментар
-                            <textarea name="feedback" placeholder="Type your message here..."></textarea>
+                            <textarea class="modal-input" rows="5" name="feedback" placeholder="Type your message here..."></textarea>
                         </label>
-                        <label>
+                        <label class="check-box" >
                             <input type="checkbox" name="contract" required />
                             Погоджуюся з розсилкою та приймаю
                             <a href="#">Умови договору</a>
                         </label>
-                        <button type="submit">Відправити</button>
+                        <button class="modal-btn" type="submit">Відправити</button>
                     </form>
                 </div>
             </div>
