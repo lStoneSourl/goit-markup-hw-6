@@ -113,7 +113,7 @@ p {
     color: var(--header-link-color);
     padding-top: 32px;
     padding-bottom: 32px;
-    transition-property: background-color, color, box-shadow;
+    transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -130,11 +130,10 @@ p {
     position: absolute;
     background-color: #2196F3;
     width: 100%;
-    height: 3px;
-    bottom: 0;
+    height: 4px;
     left: 0;
     border-radius: 2px;
-    bottom: -2px;
+    bottom: -1px;
 }
 
 .header-nav-block {
@@ -267,7 +266,6 @@ p {
 .port-link {
     display: block;
     text-decoration: none;
-    transition-property: transform;
     background: var(--main-back-color);
     transition-property: box-shadow;
     transition-duration: 250ms;
@@ -352,7 +350,7 @@ p {
     text-align: center;
     border-color: transparent;
     padding: 10px 32px;
-    transition-property: background-color, color, box-shadow;
+    transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -534,7 +532,7 @@ p {
 
 .foto-icon{
     fill: var(--border-link);
-    transition-property: color;
+    transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -577,7 +575,7 @@ p {
     height: 92px;
     border: 1px solid var(--border-link);
     border-radius: 4px;
-    transition-property: color;
+    transition-property: border-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -589,7 +587,7 @@ p {
 
 .section-icon {
     fill: var(--border-link);
-    transition-property: color;
+    transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -762,6 +760,7 @@ p {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     padding: 10px 28px;
+    border: none;
 }
 
 .contact-btn:hover,
@@ -807,6 +806,21 @@ p {
     margin-bottom: 12px;
 }
 
+.modal-div {
+    position: relative;
+}
+
+.modal-icons {
+    position: absolute;
+    left: 11px;
+    bottom: 11px;
+}
+
+.modal-div:hover {
+    fill: var(--logo-leading-color);
+    border-color: var(--logo-leading-color);
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -822,8 +836,24 @@ p {
 .modal-input {
     display: flex;
     width: 448px;
-    resize: none;
+    height: 40px;
+    padding-left: 42px;
     margin-bottom: 10px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.modal-comment {
+    display: flex;
+    width: 448px;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.modal-comment:hover {
+    cursor: pointer;
+    border-color: var(--logo-leading-color);
 }
 
 .check-box {
@@ -859,6 +889,7 @@ p {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     padding: 10px 52px;
+    border: none;
 }
 
 .modal-btn:hover,
@@ -867,6 +898,7 @@ p {
 }
 
 .modal-close {
+    position: relative;
     display: flex;
     margin-top: 8px;
     margin-left: auto;
@@ -887,13 +919,8 @@ p {
     fill: #2196F3;
 }
 
-.model-icon {
-    width: 100%;
-    height: 100%;
-}
-
   .port-link:hover .text {
-    transform: translatey(-100%);
+    transform: translateY(-100%);
 }
   
   .text {
@@ -907,6 +934,7 @@ p {
     text-align: start;
     padding: 64px 32px;
     background-color: rgba(33, 150, 243, 0.9);
+    transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
