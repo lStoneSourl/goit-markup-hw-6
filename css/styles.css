@@ -764,6 +764,10 @@ p {
     border: none;
 }
 
+.contact-send{
+    margin-left: 10px;
+}
+
 .contact-btn:hover,
 .contact-btn:focus {
     cursor: pointer;
