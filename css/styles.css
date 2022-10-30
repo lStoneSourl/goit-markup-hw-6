@@ -863,7 +863,6 @@ p {
 }
 
 .modal-comment:hover {
-    cursor: pointer;
     border-color: var(--logo-leading-color);
 }
 
