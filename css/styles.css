@@ -267,7 +267,7 @@ p {
     display: block;
     text-decoration: none;
     background: var(--main-back-color);
-    transition-property: box-shadow;
+    transition-property: box-shadow, color, background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -742,6 +742,7 @@ p {
 .contact-mail {
     background-color: inherit;
     width: 358px;
+    color: var(--main-back-color);
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
@@ -778,6 +779,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition-property: visibility, opacity;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -796,7 +798,7 @@ p {
     background-color: var(--main-back-color);
 }
 
-#contact-details-head {
+.contact-head {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
@@ -816,8 +818,13 @@ p {
     bottom: 11px;
 }
 
-.modal-div:hover {
+.modal-form > label:focus,
+.modal-form > label:hover {
     fill: var(--logo-leading-color);
+}
+
+.modal-input:focus,
+.modal-input:hover {
     border-color: var(--logo-leading-color);
 }
 
