@@ -795,8 +795,8 @@ p {
 }
 
 .modal {
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    padding: 40px 40px;
     width: 528px;
     height: 581px;
     background-color: var(--main-back-color);
@@ -816,10 +816,19 @@ p {
     position: relative;
 }
 
+.modal-p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--main-color);
+    margin-bottom: 4px;
+}
+
 .modal-icons {
     position: absolute;
     left: 11px;
-    bottom: 20px;
+    bottom: 11px;
 }
 
 .modal-form > label:focus,
@@ -832,16 +841,11 @@ p {
     border-color: var(--logo-leading-color);
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-
 .modal-form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
 
 .modal-input {
@@ -849,7 +853,6 @@ p {
     width: 448px;
     height: 40px;
     padding-left: 42px;
-    margin-bottom: 10px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 }
@@ -858,6 +861,7 @@ p {
     display: flex;
     width: 448px;
     resize: none;
+    padding: 12px 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 }
@@ -877,13 +881,44 @@ p {
     margin-top: 20px;
     margin-bottom: 30px;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
 }
 
-.check-box > input {
-    width: 16px;
+.check-box > a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--logo-leading-color);
+}
+
+.wtf {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.check-box:hover input ~ wtf {
+    cursor: pointer;
+}
+
+.check-one {
+    position: relative;
+    top: 0;
+    left: 8px;
     height: 15px;
+    width: 16px;
+    fill: var(--header-link-color);
+  }
+
+.check-two {
+    position: relative;
+    top: 0;
+    left: -8px;
+    height: 15px;
+    width: 16px;
 }
 
 .modal-btn {
@@ -908,15 +943,15 @@ p {
 }
 
 .modal-close {
-    position: relative;
+    position: absolute;
+    top: 8px;
+    right: 8px;
     display: flex;
-    margin-top: 8px;
-    margin-left: auto;
-    margin-right: 8px;
     width: 30px;
     height: 30px;
     border-radius: 50% 50%;
     align-items: center;
+    justify-content: center;
     background-color: var(--main-back-color);
     border-color: rgba(0, 0, 0, 0.1);
 }
