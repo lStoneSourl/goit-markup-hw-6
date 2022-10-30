@@ -355,7 +355,7 @@ p {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero-button:focus,
+.hero-button:focus, 
 .hero-button:hover {
     color: var(--main-back-color);
     background: var(--button-hover);
@@ -819,7 +819,7 @@ p {
 .modal-icons {
     position: absolute;
     left: 11px;
-    bottom: 11px;
+    bottom: 20px;
 }
 
 .modal-form > label:focus,
