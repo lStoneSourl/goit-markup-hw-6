@@ -628,14 +628,7 @@ p {
 .footer-content > .container {
     display: flex;
     align-items: baseline;
-}
-
-.container > div:nth-child(1) {
-    margin-right: 70px;
-}
-
-.container > div:nth-child(2) {
-    margin-right: 93px;
+    gap: 93px;
 }
 
 .logo-footer {
@@ -836,6 +829,11 @@ p {
 
 .modal-div {
     position: relative;
+    display: block;
+}
+
+.modal-div:not(:nth-child(4)) {
+    margin-bottom: 10px;
 }
 
 .modal-p{
@@ -853,21 +851,14 @@ p {
     bottom: 11px;
 }
 
-.modal-form > label:focus,
-.modal-form > label:hover {
-    fill: var(--logo-leading-color);
-}
-
 .modal-input:focus,
 .modal-input:hover {
     border-color: var(--logo-leading-color);
 }
 
-.modal-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+.modal-input:hover + .modal-icons,
+.modal-input:focus + .modal-icons {
+    fill: var(--logo-leading-color);
 }
 
 .modal-input {
@@ -893,6 +884,8 @@ p {
 }
 
 .check-box {
+    display: flex;
+    align-items: center;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
@@ -902,8 +895,8 @@ p {
     height: 24px;
     margin-top: 20px;
     margin-bottom: 30px;
-    display: flex;
-    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .wtf{
@@ -953,12 +946,11 @@ p {
 }
 
 .modal-btn {
+    display: block;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    margin: 0 auto;
     letter-spacing: 0.06em;
     color: var(--main-back-color);
     background-color: var(--logo-leading-color);
